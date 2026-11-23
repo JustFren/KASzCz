@@ -29,7 +29,7 @@ plt.show()
 def calc_resid(x_vect,y_vect):
     e=[]
     for i in range(len(x_vect)):
-        e.append(y_vect[i]-(beta_0(x_vect,y_vect))-beta_1(x_vect,y_vect)*x_vect[i])
+        e.append(y_vect[i]-(beta_0(x_vect,y_vect))+beta_1(x_vect,y_vect)*x_vect[i])
     return e
 usable_resid=calc_resid(f["godziny_nauki"],f["sredni_wynik_testow"])
 plt.scatter(f["godziny_nauki"],usable_resid)
